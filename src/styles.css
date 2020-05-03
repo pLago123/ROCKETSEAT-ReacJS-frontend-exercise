@@ -1,39 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  background-color: green;
 }
 
 body {
   font-size: 14px;
 }
 
-div {
-  width: 100%;
-  margin: 20px;
-}
-
-div li {
+.container {
+  background-color: whitesmoke;
   display: flex;
-  align-items: center;
+  height: 100%;
 }
 
-div li + li {
-  margin-top: 15px;
+.board {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 
-button {
-  background: #7159c1;
-  color: #fff;
-  border: 0;
-  padding: 10px 15px;
+.title {
+  padding: 20px 30px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.board-body {
+  /* background-color: blue; */
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.board-body > ul {
+  overflow-y: scroll;
+  /* background-color: yellow; */
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 0px 50px;
+}
+
+.repository {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 300px;
+  /* flex: 1; */
+  margin: 15px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  margin-top: 15px;
-  font-weight: bold;
-  font-size: 14px;
+  transition: box-shadow 0.17s ease-out;
 }
 
-div li button {
-  margin: 0 15px;
-  background: #ca4949;
+.repository:hover {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.repository h3 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.repository .link {
+  margin-bottom: 15px;
+}
+.repository .link :active {
+  color: red;
+}
+.repository ul {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  list-style: none;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.repository li {
+  margin-bottom: auto;
+}
+
+.repository button {
+  margin-top: 20px;
+  float: right;
+  cursor: pointer;
+  padding: 10px 15px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  outline: none;
+  background-color: rgb(48, 48, 48);
+  color: white;
+}
+
+.repository button:hover {
+  background-color: black;
+}
+
+.side-pannel {
+  min-width: 400px;
+  padding: 50px;
+  color: white;
+  background-color: rgb(20, 20, 20);
+  display: flex;
+  flex-direction: column;
+}
+
+.side-pannel form {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0px;
+}
+
+.side-pannel form h1 {
+  letter-spacing: 0.5px;
+}
+
+.side-pannel form label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.side-pannel form label :first-child {
+  margin: 15px 0px;
+}
+
+.side-pannel form label input[type="text"] {
+  border-radius: 2px;
+  border: 1px solid gainsboro;
+  padding: 10px 15px;
+
+  font-weight: bold;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  letter-spacing: 0.8px;
+
+  outline: none;
+
+  transition: box-shadow 0.25s ease-in-out;
+}
+
+.side-pannel form label input[type="text"]:focus {
+  box-shadow: 0px 0px 0px 2.5px rgb(156, 156, 156);
+}
+
+.side-pannel button {
+  width: 100px;
+  padding: 10px;
+  margin-top: 25px;
+  margin-left: auto;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  color: whitesmoke;
+  text-align: center;
+  background-color: rgb(43, 184, 125);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
