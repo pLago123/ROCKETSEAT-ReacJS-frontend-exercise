@@ -20,4 +20,4 @@ Here the user should be able to:
 
 ### Running and Testing
 
-This application will can be executed with the command `yarn start` (if you use yarn) or `npm start` and expects the backend from the previous exercise to be running at port `3333`. To be tested via Jest.js, run the commands `yarn test` or `npm run test`. The test can be ran regardless of the previous exercise's backend.
+This application can be executed with the command `yarn start` (if you use yarn) or `npm start` and expects the backend from the previous exercise to be running at port `3333`. To be tested via Jest.js, run the commands `yarn test` or `npm run test`. The test can be ran regardless of the previous exercise's backend.
